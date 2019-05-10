@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
-import ParamsForm from '../ParamsForm/ParamsForm'
+import React, { Component } from 'react';
+import ParamsForm from '../ParamsForm/ParamsForm';
 import teacherFormConfig from './teacherFormConfig';
 
 export default class TeacherForm extends Component {
-  render() {
+  render () {
     return (
       <div>
-          <title>TeacherForm</title>
-          <ParamsForm
-            config={teacherFormConfig}
-          />
-          
+        <title>TeacherForm</title>
+        <ParamsForm
+          config={teacherFormConfig}
+        />
       </div>
     )
   }
