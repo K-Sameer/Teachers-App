@@ -7,22 +7,22 @@ export default {
             name:'algorithms'
             },
             {type:'select', 
-            options:[{value:0,label:'not interested'},{value:1,label:'interested'},{value:2,label:'experienced'}], 
+            options:[{value:0,label:'Not interested'},{value:1,label:'Interested'},{value:2,label:'Experienced'}], 
             label:'Scientific Modeling',
             name:'modeling'
             },
             {type:'select', 
-            options:[{value:0,label:'not interested'},{value:1,label:'interested'},{value:2,label:'experienced'}], 
+            options:[{value:0,label:'Not interested'},{value:1,label:'Interested'},{value:2,label:'Experienced'}], 
             label:'Web Technologies',
             name:'web'
             },
             {type:'select', 
-            options:[{value:0,label:'not interested'},{value:1,label:'interested'},{value:2,label:'experienced'}], 
+            options:[{value:0,label:'Not interested'},{value:1,label:'Interested'},{value:2,label:'Experienced'}], 
             label:'Mobile Technologies',
             name:'mobile'
             },
             {type:'select', 
-            options:[{value:0,label:'not interested'},{value:1,label:'interested'},{value:2,label:'experienced'}], 
+            options:[{value:0,label:'Not interested'},{value:1,label:'Interested'},{value:2,label:'Experienced'}], 
             label:'Artificial Intelligence',
             name:'ai'
             }

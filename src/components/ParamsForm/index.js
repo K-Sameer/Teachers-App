@@ -1,1 +1,1 @@
-export default 'ParamsForm'
+export default from 'ParamsForm';

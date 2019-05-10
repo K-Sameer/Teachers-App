@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import TeacherForm from '../../components/TeacherForm/TeacherForm'
-
+import styles from './TeacherPage.module.css';
 
 export default class TeacherPage extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.container} >
           <header>TeacherPage</header>
           <TeacherForm></TeacherForm>
       </div>
