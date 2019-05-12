@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    max-width: 600px;
+}
+.paper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px;
+}
+.group{
+    padding: 16px;
+}
+.groupTitle{
+    padding: 8px;
+    text-align: center;
+}

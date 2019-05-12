@@ -1,6 +1,23 @@
 export default {
   groups: [
     {
+      name: 'Details',
+      controls: [
+        {
+          type: 'input',
+          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
+          label: 'Name',
+          name: 'name',
+        },
+        {
+          type: 'input',
+          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
+          label: 'Surname',
+          name: 'surname',
+        },
+      ],
+    },
+    {
       name: 'Interests',
       controls: [
         {
@@ -46,22 +63,6 @@ export default {
         }
       ]
     },
-    {
-      name: 'Details',
-      controls: [
-        {
-          type: 'input',
-          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
-          label: 'Name',
-          name: 'name',
-        },
-        {
-          type: 'input',
-          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
-          label: 'Surname',
-          name: 'surname',
-        },
-      ],
-    },
+
   ],
 }

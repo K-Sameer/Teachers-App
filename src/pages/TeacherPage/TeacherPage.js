@@ -6,7 +6,6 @@ export default class TeacherPage extends Component {
   render () {
     return (
       <div className={styles.container} >
-        <header>TeacherPage</header>
         <TeacherForm></TeacherForm>
       </div>
     )
