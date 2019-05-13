@@ -12,6 +12,8 @@
 }
 .group{
     padding: 16px;
+    display: flex;
+    flex-direction: column
 }
 .groupTitle{
     padding: 8px;

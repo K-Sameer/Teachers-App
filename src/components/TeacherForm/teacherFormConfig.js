@@ -1,7 +1,8 @@
 export default {
   groups: [
     {
-      name: 'Details',
+      name: 'General Information',
+      description: 'Information about yourself:',
       controls: [
         {
           type: 'input',
@@ -15,10 +16,17 @@ export default {
           label: 'Surname',
           name: 'surname',
         },
+        {
+          type: '',
+          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
+          label: 'Surname',
+          name: 'surname',
+        },
       ],
     },
     {
-      name: 'Interests',
+      name: 'Interests:',
+      description: 'Academic fields you are interested in:',
       controls: [
         {
           type: 'select',
@@ -54,6 +62,7 @@ export default {
     },
     {
       name: 'Working format',
+      description: '',
       controls: [
         {
           type: 'radio',
@@ -63,6 +72,14 @@ export default {
         }
       ]
     },
-
+    {
+      name: 'Button',
+      controls: [
+        {
+          type: 'button',
+          value: 'Update'
+        }
+      ]
+    }
   ],
 }
