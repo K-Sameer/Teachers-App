@@ -10,7 +10,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import styles from './ParamsForm.module.css';
+import TextField from '@material-ui/core/TextField';
+import myStyles from './ParamsForm.module.css';
 import { Button } from '@material-ui/core';
 
 export default class ParamsForm extends Component {
@@ -43,11 +44,11 @@ export default class ParamsForm extends Component {
 
 	renderGroup(group){
 		return (
-    <div key={group.name} className={styles.group}>
+    <div key={group.name} className={myStyles.group}>
       {
         group.name==='Button'?
           null:
-          <Typography variant="h6" className={styles.groupTitle}>{group.name}</Typography>
+          <Typography variant="h6" className={myStyles.groupTitle}>{group.name}</Typography>
       }
       <Grid container spacing={24}>
         {
@@ -70,7 +71,9 @@ export default class ParamsForm extends Component {
 			case 'radio':
         return this.renderRadio(control);
       case 'button':
-				return this.renderButton(control);
+        return this.renderButton(control);
+      case 'textfield':
+				return this.renderTextField(control);        
 			default:
 				return null;
 		}
@@ -79,7 +82,7 @@ export default class ParamsForm extends Component {
 	renderSelect(select){
 		const controlState = this.state.params.find((ctl) => ctl.name === select.name);
 		return (
-			<FormControl fullWidth margin='dense'>
+			<FormControl fullWidth margin='dense' key={select.name}>
 				<InputLabel >{select.label}</InputLabel>
 					<Select
 						value={controlState.value}
@@ -96,7 +99,23 @@ export default class ParamsForm extends Component {
 					</Select>
 			</FormControl>
 		)
-	}
+  }
+  
+  renderTextField(textField){
+    return (
+      <Grid item xs={12} key={textField.name}>
+        <TextField
+          name={textField.name}
+          label={textField.label}
+          onChange={this.handleChange}
+          multiline
+          fullWidth
+          placeholder='About'
+          variant="outlined"
+      />
+    </Grid>
+    )
+  }
 
 	renderInput(input){
 		const controlState = this.state.params.find((ctl) => ctl.name === input.name);
@@ -116,7 +135,7 @@ export default class ParamsForm extends Component {
 	renderRadio(radioGroup){
 		const controlState = this.state.params.find((ctl) => ctl.name === radioGroup.name);
 		return (
-			<FormControl >
+			<FormControl key={radioGroup.name}>
 				<RadioGroup
 					name={radioGroup.name}
 					value={String(controlState.value)}
@@ -134,11 +153,14 @@ export default class ParamsForm extends Component {
   }
   
   renderButton(button){
+
+    // const params = this.state.params.filter((param) => (typeof param.name !== undefined && param.name !== null)
+    // )
+
     return (
       <Button 
         variant="contained" 
         key={button.value} 
-        className={styles.Updatebutton}
         onClick={() => this.props.onSubmit(this.state)}>
         {
           button.value
@@ -149,8 +171,8 @@ export default class ParamsForm extends Component {
 
 	render() {
 		return (
-		<Grid className={styles.main} container spacing={24}>
-			<Paper className={styles.paper}>
+		<Grid className={myStyles.main} container spacing={24}>
+			<Paper className={myStyles.paper}>
 				{this.props.config.groups.map((group) => this.renderGroup(group))}
 			</Paper>
 		</Grid>

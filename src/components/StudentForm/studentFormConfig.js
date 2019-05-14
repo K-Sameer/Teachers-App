@@ -1,30 +1,6 @@
 export default {
   groups: [
     {
-      name: 'General Information',
-      description: 'Information about yourself:',
-      controls: [
-        {
-          type: 'input',
-          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
-          label: 'Name',
-          name: 'name',
-        },
-        {
-          type: 'input',
-          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
-          label: 'Surname',
-          name: 'surname',
-        },
-        {
-          type: 'textfield',
-          // options:[{value:0,label:'More distance'},{value:1,label:'Equal'},{value:2,label:'More Face to Face'}],
-          label: 'Details about you',
-          name: 'about',
-        },
-      ],
-    },
-    {
       name: 'Interests:',
       description: 'Academic fields you are interested in:',
       controls: [
