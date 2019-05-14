@@ -154,14 +154,19 @@ export default class ParamsForm extends Component {
   
   renderButton(button){
 
-    // const params = this.state.params.filter((param) => (typeof param.name !== undefined && param.name !== null)
-    // )
+    const params = this.state.params.filter((param) => 
+      (
+        typeof param.name !== 'undefined' 
+        &&
+        param.name !== null
+      )
+    )
 
     return (
       <Button 
         variant="contained" 
         key={button.value} 
-        onClick={() => this.props.onSubmit(this.state)}>
+        onClick={() => this.props.onSubmit(params)}>
         {
           button.value
         }
