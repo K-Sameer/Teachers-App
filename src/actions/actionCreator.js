@@ -2,7 +2,6 @@ import {
   SET_CURRENT_TEACHER,
   SET_CURRENT_STUDENT,
   SET_TEACHERS,
-
 } from './actionTypes';
 
 export const setCurrentTeacher = (teacher) => ({
