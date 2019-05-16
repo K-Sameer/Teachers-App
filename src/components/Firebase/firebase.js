@@ -1,7 +1,7 @@
 import app from 'firebase/app';
-import database from 'firebase/app';
+import 'firebase/database';
 
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyBnozU7bIQyHY9JQxvk-W3iQuEhDqxFck8",
   authDomain: "teachersapp-2ee85.firebaseapp.com",
   databaseURL: "https://teachersapp-2ee85.firebaseio.com",
@@ -13,10 +13,13 @@ const firebaseConfig = {
 
 class Firebase {
   constructor() {
-    app.initializeApp(firebaseConfig);
-
+    app.initializeApp(config);
     this.db = app.database();
+    console.log(this.db)
   }
+
+  teacher = uid => this.db.ref(`teachers/${uid}`);
+  teachers = () => this.db.ref('teachers');
 }
 
 export default Firebase;

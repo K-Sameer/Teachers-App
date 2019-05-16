@@ -9,6 +9,6 @@ export default (state = initialState, action) => {
     case SET_CURRENT_STUDENT:
       return action.student; 
 		default:
-			return {};
+			return state;
 	}
 }
