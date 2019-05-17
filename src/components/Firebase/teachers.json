@@ -3,11 +3,11 @@
     {
       "name":"Іван",
       "surname":"Петров",
-      "details":"Наймолодший мільярдер світу та творець всесвітньовідомої соціальної мережі.",
+      "details":"Професор. Творець соціальної мережі.",
       "interests":[
-        {"name":"algorithms","value":0},
+        {"name":"algorithms","value":1},
         {"name":"modeling","value":0},
-        {"name":"web","value":0},
+        {"name":"web","value":2},
         {"name":"mobile","value":0},
         {"name":"ai","value":0}
       ],
@@ -18,11 +18,11 @@
       "surname":"Іванов",
       "details":"Завідувач кафедри. Найбільш відомий своїми винаходами у галузі штучного інтелекту.",
       "interests":[
-        {"name":"algorithms","value":0},
+        {"name":"algorithms","value":2},
         {"name":"modeling","value":0},
         {"name":"web","value":0},
         {"name":"mobile","value":0},
-        {"name":"ai","value":0}
+        {"name":"ai","value":2}
       ],
       "workingFormat": 0
     }

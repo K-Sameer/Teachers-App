@@ -14,7 +14,15 @@ export default class TeacherListItem extends Component {
         <CardContent>
           <Typography variant="h6" component="h6"> {name + ' ' + surname }</Typography>
           <Typography component = "p"> {details} </Typography>
-          <Typography>{interests.name}</Typography>
+          {/* <Typography>{
+              interests.map(interest =>
+                return 
+                  <p>
+
+                  </p>
+
+              )
+            }</Typography> */}
         </CardContent>
       </Card>
     )

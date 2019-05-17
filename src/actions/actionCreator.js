@@ -4,15 +4,25 @@ import {
   SET_TEACHERS,
 } from './actionTypes';
 
-export const setCurrentTeacher = (teacher) => (
-  //TODO redux thunk and  
+import { firebase } from "../App"
 
-  {
-  type: SET_CURRENT_TEACHER,
-  teacher: teacher
-}
 
-);
+export const setCurrentTeacher = (teacher) => {
+  // //TODO redux thunk and  
+  // console.log(firebase)
+  // const newPostKey = firebase.teachers().push().key;
+
+  // var updates = {};
+  // updates['/teachers/' + newPostKey] = teacher;
+
+  // firebase.db.ref().update(updates);
+
+  return {
+    type: SET_CURRENT_TEACHER,
+    teacher: teacher
+  }
+
+};
 
 export const setCurrentStudent = (student) => ({
   type: SET_CURRENT_STUDENT,

@@ -11,10 +11,11 @@ import StudentPage from './pages/StudentPage/StudentPage.js'
 import TeacherPage from './pages/TeacherPage/TeacherPage.js'
 
 export const history = createBrowserHistory();
+export const firebase = new Firebase();
 
 function App () {
   return (
-    <FirebaseContext.Provider value={new Firebase()}>
+    <FirebaseContext.Provider value={firebase}>
       <Provider store={configureStore(history)}>
         <ConnectedRouter history={history}> 
           <Router>
