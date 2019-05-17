@@ -11,7 +11,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import myStyles from './ParamsForm.module.css';
+import styles from './ParamsForm.module.css';
 import { Button } from '@material-ui/core';
 
 export default class ParamsForm extends Component {
@@ -44,13 +44,13 @@ export default class ParamsForm extends Component {
 
 	renderGroup(group){
 		return (
-    <div key={group.name} className={myStyles.group}>
+    <div key={group.name} className={styles.group}>
       {
         group.name==='Button'?
           null:
-          <Typography variant="h6" className={myStyles.groupTitle}>{group.name}</Typography>
+          <Typography variant="h6" className={styles.groupTitle}>{group.name}</Typography>
       }
-      <Grid container spacing={24}>
+      <Grid container spacing={24} justify={group.name==='Button'? "center" : null }> 
         {
           group.controls.map(
             control =>
@@ -166,7 +166,8 @@ export default class ParamsForm extends Component {
       <Button 
         variant="contained" 
         key={button.value} 
-        onClick={() => this.props.onSubmit(params)}>
+        onClick={() => this.props.onSubmit(params)}
+        >
         {
           button.value
         }
@@ -176,11 +177,11 @@ export default class ParamsForm extends Component {
 
 	render() {
 		return (
-		<Grid className={myStyles.main} container spacing={24}>
-			<Paper className={myStyles.paper}>
+		<div className={styles.main} >
+			<Paper className={styles.paper}>
 				{this.props.config.groups.map((group) => this.renderGroup(group))}
 			</Paper>
-		</Grid>
+		</div>
 		)
 	}
 }

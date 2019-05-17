@@ -15,6 +15,11 @@
     display: flex;
     flex-direction: column
 }
+
+.groupButton{
+    justify-content: 'center'
+}
+
 .groupTitle{
     padding: 8px;
     text-align: center;

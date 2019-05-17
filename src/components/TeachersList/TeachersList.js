@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TeacherListItem from '../TeachersListItem/TeacherListItem';
 import List from '@material-ui/core/List';
-import myStyles from './TeachersList.module.css';
+import styles from './TeachersList.module.css';
 import { withFirebase } from '../../components/Firebase/context';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
@@ -20,7 +20,7 @@ class TeachersList extends Component {
   render() {
     const { teachers } = this.props;
     return (
-      <List className={myStyles.container}>
+      <List className={styles.container}>
         {
           teachers && teachers.map(teacher => <TeacherListItem teacher={teacher} key={teacher.name}/>)
         }

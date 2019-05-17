@@ -4,10 +4,15 @@ import {
   SET_TEACHERS,
 } from './actionTypes';
 
-export const setCurrentTeacher = (teacher) => ({
+export const setCurrentTeacher = (teacher) => (
+  //TODO redux thunk and  
+
+  {
   type: SET_CURRENT_TEACHER,
   teacher: teacher
-});
+}
+
+);
 
 export const setCurrentStudent = (student) => ({
   type: SET_CURRENT_STUDENT,

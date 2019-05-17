@@ -4,12 +4,12 @@ import studentFormConfig from './studentFormConfig';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { setCurrentStudent } from '../../actions/actionCreator'
-import myStyles from './StudentForm.module.css';
+import styles from './StudentForm.module.css';
 
 class StudentForm extends Component {
   render () {
     return (
-      <div className={myStyles.studentForm}>
+      <div className={styles.studentForm}>
         <ParamsForm
           config={studentFormConfig}
           onSubmit={this.props.setCurrentStudent}

@@ -1,6 +1,5 @@
 .container {
-  background-color: coral;
   display: flex;
   margin: auto;
-  width: 700px;
+  max-width: 900px;
 }
